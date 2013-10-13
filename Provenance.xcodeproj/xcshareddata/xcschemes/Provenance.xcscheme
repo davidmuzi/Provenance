@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1ACEA8E317F75F350031B1C9"
+               BlueprintIdentifier = "1ADF1A241800ED7E007FA536"
                BuildableName = "libPVSNES.a"
                BlueprintName = "PVSNES"
                ReferencedContainer = "container:PVSNES/PVSNES.xcodeproj">

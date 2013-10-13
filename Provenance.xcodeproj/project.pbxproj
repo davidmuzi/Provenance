@@ -97,6 +97,11 @@
 		1A935E6817CD3C340012E0C4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A935E6717CD3C340012E0C4 /* Default@2x.png */; };
 		1A935E6A17CD3C3C0012E0C4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1A935E6917CD3C3C0012E0C4 /* Default-568h@2x.png */; };
 		1A9647B117D6864300A55612 /* PVControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9647B017D6864300A55612 /* PVControllerViewController.m */; };
+		1AA2DE1F180AB3C4008154A8 /* Famicom.sys in Resources */ = {isa = PBXBuildFile; fileRef = 1AA2DE1A180AB3C4008154A8 /* Famicom.sys */; };
+		1AA2DE20180AB3C4008154A8 /* Game Boy Advance.sys in Resources */ = {isa = PBXBuildFile; fileRef = 1AA2DE1B180AB3C4008154A8 /* Game Boy Advance.sys */; };
+		1AA2DE21180AB3C4008154A8 /* Game Boy Color.sys in Resources */ = {isa = PBXBuildFile; fileRef = 1AA2DE1C180AB3C4008154A8 /* Game Boy Color.sys */; };
+		1AA2DE22180AB3C4008154A8 /* Game Boy.sys in Resources */ = {isa = PBXBuildFile; fileRef = 1AA2DE1D180AB3C4008154A8 /* Game Boy.sys */; };
+		1AA2DE23180AB3C4008154A8 /* Super Famicom.sys in Resources */ = {isa = PBXBuildFile; fileRef = 1AA2DE1E180AB3C4008154A8 /* Super Famicom.sys */; };
 		1AADCDAA17BD861000F53CFE /* button-thin-pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AADCDA617BD861000F53CFE /* button-thin-pressed.png */; };
 		1AADCDAB17BD861000F53CFE /* button-thin-pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AADCDA717BD861000F53CFE /* button-thin-pressed@2x.png */; };
 		1AADCDAC17BD861000F53CFE /* button-thin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AADCDA817BD861000F53CFE /* button-thin.png */; };
@@ -258,6 +263,11 @@
 		1A9647AE17D675C300A55612 /* PVGame 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "PVGame 2.xcdatamodel"; sourceTree = "<group>"; };
 		1A9647AF17D6864300A55612 /* PVControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVControllerViewController.h; sourceTree = "<group>"; };
 		1A9647B017D6864300A55612 /* PVControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVControllerViewController.m; sourceTree = "<group>"; };
+		1AA2DE1A180AB3C4008154A8 /* Famicom.sys */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Famicom.sys; path = PVSNES/PVSNES/higan/profile/Famicom.sys; sourceTree = SOURCE_ROOT; };
+		1AA2DE1B180AB3C4008154A8 /* Game Boy Advance.sys */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Game Boy Advance.sys"; path = "PVSNES/PVSNES/higan/profile/Game Boy Advance.sys"; sourceTree = SOURCE_ROOT; };
+		1AA2DE1C180AB3C4008154A8 /* Game Boy Color.sys */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Game Boy Color.sys"; path = "PVSNES/PVSNES/higan/profile/Game Boy Color.sys"; sourceTree = SOURCE_ROOT; };
+		1AA2DE1D180AB3C4008154A8 /* Game Boy.sys */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Game Boy.sys"; path = "PVSNES/PVSNES/higan/profile/Game Boy.sys"; sourceTree = SOURCE_ROOT; };
+		1AA2DE1E180AB3C4008154A8 /* Super Famicom.sys */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "Super Famicom.sys"; path = "PVSNES/PVSNES/higan/profile/Super Famicom.sys"; sourceTree = SOURCE_ROOT; };
 		1AADCDA617BD861000F53CFE /* button-thin-pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-thin-pressed.png"; sourceTree = "<group>"; };
 		1AADCDA717BD861000F53CFE /* button-thin-pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-thin-pressed@2x.png"; sourceTree = "<group>"; };
 		1AADCDA817BD861000F53CFE /* button-thin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-thin.png"; sourceTree = "<group>"; };
@@ -301,8 +311,8 @@
 			files = (
 				1A2A95AA17F7682400F1CB0D /* libstdc++.dylib in Frameworks */,
 				1A2A95AC17F7686400F1CB0D /* libPVSupport.a in Frameworks */,
-				1A2A95A617F7627E00F1CB0D /* libPVSNES.a in Frameworks */,
 				1ACEA8DA17F75EBC0031B1C9 /* libPVGenesis.a in Frameworks */,
+				1A2A95A617F7627E00F1CB0D /* libPVSNES.a in Frameworks */,
 				423BB97B17DD35B10048F457 /* AssetsLibrary.framework in Frameworks */,
 				1A4869DD17C8D60C0019F6D2 /* CFNetwork.framework in Frameworks */,
 				1A4869DE17C8D60C0019F6D2 /* MobileCoreServices.framework in Frameworks */,
@@ -604,6 +614,11 @@
 				1A0938BE17CD45EC00029021 /* Icon-Small.png */,
 				1A4869BC17C8CA2C0019F6D2 /* Images */,
 				1A34C58517D517760058E7D1 /* systems.plist */,
+				1AA2DE1A180AB3C4008154A8 /* Famicom.sys */,
+				1AA2DE1B180AB3C4008154A8 /* Game Boy Advance.sys */,
+				1AA2DE1C180AB3C4008154A8 /* Game Boy Color.sys */,
+				1AA2DE1D180AB3C4008154A8 /* Game Boy.sys */,
+				1AA2DE1E180AB3C4008154A8 /* Super Famicom.sys */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -706,12 +721,14 @@
 				1A47C96917BC310700C27644 /* dPad-Down.png in Resources */,
 				1A47C96A17BC310700C27644 /* dPad-Down@2x.png in Resources */,
 				1A47C96B17BC310700C27644 /* dPad-DownLeft.png in Resources */,
+				1AA2DE1F180AB3C4008154A8 /* Famicom.sys in Resources */,
 				1A47C96C17BC310700C27644 /* dPad-DownLeft@2x.png in Resources */,
 				1A47C96D17BC310700C27644 /* dPad-DownRight.png in Resources */,
 				1A47C96E17BC310700C27644 /* dPad-DownRight@2x.png in Resources */,
 				1A47C96F17BC310700C27644 /* dPad-Left.png in Resources */,
 				1A47C97017BC310700C27644 /* dPad-Left@2x.png in Resources */,
 				1A47C97117BC310700C27644 /* dPad-None.png in Resources */,
+				1AA2DE22180AB3C4008154A8 /* Game Boy.sys in Resources */,
 				1A47C97217BC310700C27644 /* dPad-None@2x.png in Resources */,
 				1A47C97317BC310700C27644 /* dPad-Right.png in Resources */,
 				1A47C97417BC310700C27644 /* dPad-Right@2x.png in Resources */,
@@ -734,18 +751,21 @@
 				1A4869D017C8CA920019F6D2 /* bar-shadow@2x.png in Resources */,
 				1A4869D117C8CA920019F6D2 /* Gear.png in Resources */,
 				1A4869D217C8CA920019F6D2 /* Gear@2x.png in Resources */,
+				1AA2DE20180AB3C4008154A8 /* Game Boy Advance.sys in Resources */,
 				1A4869D317C8CA920019F6D2 /* GearLandscape.png in Resources */,
 				1A4869D417C8CA920019F6D2 /* GearLandscape@2x.png in Resources */,
 				1A935E6217CD3C1E0012E0C4 /* Icon.png in Resources */,
 				1A935E6417CD3C210012E0C4 /* Icon@2x.png in Resources */,
 				1A935E6617CD3C2F0012E0C4 /* Default.png in Resources */,
 				1A935E6817CD3C340012E0C4 /* Default@2x.png in Resources */,
+				1AA2DE23180AB3C4008154A8 /* Super Famicom.sys in Resources */,
 				1A935E6A17CD3C3C0012E0C4 /* Default-568h@2x.png in Resources */,
 				1A09389E17CD3C6400029021 /* Icon-72.png in Resources */,
 				1A0938A017CD3C6700029021 /* Icon-72@2x.png in Resources */,
 				1A0938A217CD3C7300029021 /* Default-Portrait~ipad.png in Resources */,
 				1A0938A417CD3C7700029021 /* Default-Portrait@2x~ipad.png in Resources */,
 				1A0938A617CD3C8100029021 /* Default-Landscape~ipad.png in Resources */,
+				1AA2DE21180AB3C4008154A8 /* Game Boy Color.sys in Resources */,
 				1A0938A817CD3C8400029021 /* Default-Landscape@2x~ipad.png in Resources */,
 				1A0938C017CD45ED00029021 /* Icon-Small-50.png in Resources */,
 				1A0938C117CD45ED00029021 /* Icon-Small-50@2x.png in Resources */,
@@ -872,7 +892,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Provenance/Provenance-Prefix.pch";
@@ -894,7 +914,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = NO;
-				VALID_ARCHS = "armv7 armv7s";
 				WARNING_LDFLAGS = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -904,7 +923,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Provenance/Provenance-Prefix.pch";
@@ -927,7 +946,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = NO;
-				VALID_ARCHS = "armv7 armv7s";
 				WARNING_LDFLAGS = "";
 				WRAPPER_EXTENSION = app;
 			};

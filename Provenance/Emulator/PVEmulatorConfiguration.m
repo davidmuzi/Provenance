@@ -85,6 +85,8 @@ NSString * const PVSNESSystemIdentifier = @"com.provenance.snes";
 		core = [[PVSNESEmulatorCore alloc] init];
 	}
 	
+	[core setSystemIdentifier:systemID];
+	
 	return core;
 }
 

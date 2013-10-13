@@ -9,6 +9,9 @@
 #import "PVEmulatorCore.h"
 #import "NSObject+PVAbstractAdditions.h"
 #import <mach/mach_time.h>
+
+NSString *const PVGameCoreErrorDomain = @"com.jamsoftonline.Provenance.GameCore.ErrorDomain";
+
 static Class PVEmulatorCoreClass = Nil;
 static NSTimeInterval defaultFrameInterval = 60.0;
 
@@ -105,7 +108,7 @@ static NSTimeInterval defaultFrameInterval = 60.0;
 
 #pragma mark - Video
 
-- (uint16_t *)videoBuffer
+- (const void *)videoBuffer
 {
 	[self doesNotImplementSelector:_cmd];
 	return NULL;
@@ -168,8 +171,7 @@ static NSTimeInterval defaultFrameInterval = 60.0;
 
 - (NSUInteger)audioBufferCount
 {
-	[self doesNotImplementSelector:_cmd];
-	return 0;
+	return 1;
 }
 
 - (void)getAudioBuffer:(void *)buffer frameCount:(NSUInteger)frameCount bufferIndex:(NSUInteger)index

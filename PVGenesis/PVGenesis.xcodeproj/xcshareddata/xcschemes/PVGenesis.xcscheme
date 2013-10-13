@@ -17,7 +17,7 @@
                BlueprintIdentifier = "1ACEA64317F7467D0031B1C9"
                BuildableName = "libPVSupport.a"
                BlueprintName = "PVSupport"
-               ReferencedContainer = "container:../ProvenanceSupport/PVSupport.xcodeproj">
+               ReferencedContainer = "container:../PVSupport/PVSupport.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry

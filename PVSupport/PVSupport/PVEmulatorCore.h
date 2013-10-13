@@ -9,6 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "OERingBuffer.h"
 
+extern NSString *const PVGameCoreErrorDomain;
+
+NS_ENUM(NSInteger, PVGameCoreErrorCodes) {
+    PVGameCoreCouldNotStartCoreError = -1,
+    PVGameCoreCouldNotLoadROMError = -2,
+    PVGameCoreCouldNotLoadStateError = -3,
+    PVGameCoreStateHasWrongSizeError = -4,
+    PVGameCoreCouldNotSaveStateError = -5,
+};
+
 @interface PVEmulatorCore : NSObject {
 	
 	OERingBuffer __strong **ringBuffers;
@@ -25,6 +35,7 @@
 @property (nonatomic, copy) NSString *romName;
 @property (nonatomic, copy) NSString *batterySavesPath;
 @property (atomic, assign) BOOL shouldResyncTime;
+@property (nonatomic, copy) NSString *systemIdentifier;
 
 - (void)startEmulation;
 - (void)resetEmulation;
@@ -35,7 +46,7 @@
 - (void)executeFrame;
 - (BOOL)loadFileAtPath:(NSString*)path;
 
-- (uint16_t *)videoBuffer;
+- (const void *)videoBuffer;
 - (CGRect)screenRect;
 - (CGSize)aspectSize;
 - (CGSize)bufferSize;
