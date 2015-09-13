@@ -5,6 +5,9 @@
       location = "container:Provenance.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Provenance TV/Provenance TV.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:PVSupport/PVSupport.xcodeproj">
    </FileRef>
    <FileRef

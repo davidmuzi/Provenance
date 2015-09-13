@@ -1,0 +1,377 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BECD15741BA4CF1200F2EBD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD15731BA4CF1200F2EBD4 /* AppDelegate.swift */; };
+		BECD15761BA4CF1200F2EBD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD15751BA4CF1200F2EBD4 /* ViewController.swift */; };
+		BECD15791BA4CF1200F2EBD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECD15771BA4CF1200F2EBD4 /* Main.storyboard */; };
+		BECD157B1BA4CF1200F2EBD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BECD157A1BA4CF1200F2EBD4 /* Assets.xcassets */; };
+		BECD15831BA4D06200F2EBD4 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD15821BA4D06200F2EBD4 /* libstdc++.tbd */; };
+		BECD15851BA4D07100F2EBD4 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD15841BA4D07100F2EBD4 /* libc++.tbd */; };
+		BECD15871BA4D08200F2EBD4 /* libPVSNES.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD15861BA4D08200F2EBD4 /* libPVSNES.a */; };
+		BECD15891BA4D08800F2EBD4 /* libPVSupport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD15881BA4D08800F2EBD4 /* libPVSupport.a */; };
+		BECD158B1BA4D09500F2EBD4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD158A1BA4D09500F2EBD4 /* CoreGraphics.framework */; };
+		BECD158D1BA4D09B00F2EBD4 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD158C1BA4D09B00F2EBD4 /* CoreAudio.framework */; };
+		BECD158F1BA4D0A100F2EBD4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD158E1BA4D0A100F2EBD4 /* AudioToolbox.framework */; };
+		BECD15911BA4D0A900F2EBD4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD15901BA4D0A900F2EBD4 /* Foundation.framework */; };
+		BECD15931BA4D0B000F2EBD4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD15921BA4D0B000F2EBD4 /* UIKit.framework */; };
+		BECD15951BA4D0B700F2EBD4 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECD15941BA4D0B700F2EBD4 /* OpenGLES.framework */; };
+		BECD15991BA4D4AE00F2EBD4 /* EmulatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD15981BA4D4AE00F2EBD4 /* EmulatorViewController.swift */; };
+		BECD159B1BA4D56800F2EBD4 /* GLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD159A1BA4D56800F2EBD4 /* GLViewController.swift */; };
+		BECD159D1BA4D59800F2EBD4 /* EmulatorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD159C1BA4D59800F2EBD4 /* EmulatorConfiguration.swift */; };
+		BECD159F1BA4D6EB00F2EBD4 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD159E1BA4D6EB00F2EBD4 /* Game.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BECD15701BA4CF1200F2EBD4 /* Provenance TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Provenance TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BECD15731BA4CF1200F2EBD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BECD15751BA4CF1200F2EBD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BECD15781BA4CF1200F2EBD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BECD157A1BA4CF1200F2EBD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BECD157C1BA4CF1200F2EBD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BECD15821BA4D06200F2EBD4 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		BECD15841BA4D07100F2EBD4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		BECD15861BA4D08200F2EBD4 /* libPVSNES.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPVSNES.a; path = "../PVSNES/build/Debug-iphoneos/libPVSNES.a"; sourceTree = "<group>"; };
+		BECD15881BA4D08800F2EBD4 /* libPVSupport.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPVSupport.a; path = "../PVSupport/build/Debug-iphoneos/libPVSupport.a"; sourceTree = "<group>"; };
+		BECD158A1BA4D09500F2EBD4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BECD158C1BA4D09B00F2EBD4 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		BECD158E1BA4D0A100F2EBD4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BECD15901BA4D0A900F2EBD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BECD15921BA4D0B000F2EBD4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BECD15941BA4D0B700F2EBD4 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		BECD15981BA4D4AE00F2EBD4 /* EmulatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmulatorViewController.swift; path = "Provenance TV/EmulatorViewController.swift"; sourceTree = "<group>"; };
+		BECD159A1BA4D56800F2EBD4 /* GLViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GLViewController.swift; path = "Provenance TV/GLViewController.swift"; sourceTree = "<group>"; };
+		BECD159C1BA4D59800F2EBD4 /* EmulatorConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EmulatorConfiguration.swift; path = "Provenance TV/EmulatorConfiguration.swift"; sourceTree = "<group>"; };
+		BECD159E1BA4D6EB00F2EBD4 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = "Provenance TV/Game.swift"; sourceTree = "<group>"; };
+		BECD15A01BA5280300F2EBD4 /* PVSupport-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "PVSupport-Bridging-Header.h"; path = "Provenance TV/PVSupport-Bridging-Header.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BECD156D1BA4CF1200F2EBD4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECD15951BA4D0B700F2EBD4 /* OpenGLES.framework in Frameworks */,
+				BECD15931BA4D0B000F2EBD4 /* UIKit.framework in Frameworks */,
+				BECD15911BA4D0A900F2EBD4 /* Foundation.framework in Frameworks */,
+				BECD158F1BA4D0A100F2EBD4 /* AudioToolbox.framework in Frameworks */,
+				BECD158D1BA4D09B00F2EBD4 /* CoreAudio.framework in Frameworks */,
+				BECD158B1BA4D09500F2EBD4 /* CoreGraphics.framework in Frameworks */,
+				BECD15891BA4D08800F2EBD4 /* libPVSupport.a in Frameworks */,
+				BECD15871BA4D08200F2EBD4 /* libPVSNES.a in Frameworks */,
+				BECD15851BA4D07100F2EBD4 /* libc++.tbd in Frameworks */,
+				BECD15831BA4D06200F2EBD4 /* libstdc++.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BECD15671BA4CF1200F2EBD4 = {
+			isa = PBXGroup;
+			children = (
+				BECD15971BA4D49600F2EBD4 /* Emulator */,
+				BECD15721BA4CF1200F2EBD4 /* Provenance TV */,
+				BECD15961BA4D0C100F2EBD4 /* Frameworks */,
+				BECD15711BA4CF1200F2EBD4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BECD15711BA4CF1200F2EBD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BECD15701BA4CF1200F2EBD4 /* Provenance TV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BECD15721BA4CF1200F2EBD4 /* Provenance TV */ = {
+			isa = PBXGroup;
+			children = (
+				BECD15731BA4CF1200F2EBD4 /* AppDelegate.swift */,
+				BECD15751BA4CF1200F2EBD4 /* ViewController.swift */,
+				BECD15771BA4CF1200F2EBD4 /* Main.storyboard */,
+				BECD157A1BA4CF1200F2EBD4 /* Assets.xcassets */,
+				BECD157C1BA4CF1200F2EBD4 /* Info.plist */,
+			);
+			path = "Provenance TV";
+			sourceTree = "<group>";
+		};
+		BECD15961BA4D0C100F2EBD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BECD15941BA4D0B700F2EBD4 /* OpenGLES.framework */,
+				BECD15921BA4D0B000F2EBD4 /* UIKit.framework */,
+				BECD15901BA4D0A900F2EBD4 /* Foundation.framework */,
+				BECD158E1BA4D0A100F2EBD4 /* AudioToolbox.framework */,
+				BECD158C1BA4D09B00F2EBD4 /* CoreAudio.framework */,
+				BECD158A1BA4D09500F2EBD4 /* CoreGraphics.framework */,
+				BECD15881BA4D08800F2EBD4 /* libPVSupport.a */,
+				BECD15861BA4D08200F2EBD4 /* libPVSNES.a */,
+				BECD15841BA4D07100F2EBD4 /* libc++.tbd */,
+				BECD15821BA4D06200F2EBD4 /* libstdc++.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BECD15971BA4D49600F2EBD4 /* Emulator */ = {
+			isa = PBXGroup;
+			children = (
+				BECD15981BA4D4AE00F2EBD4 /* EmulatorViewController.swift */,
+				BECD159A1BA4D56800F2EBD4 /* GLViewController.swift */,
+				BECD159C1BA4D59800F2EBD4 /* EmulatorConfiguration.swift */,
+				BECD159E1BA4D6EB00F2EBD4 /* Game.swift */,
+				BECD15A01BA5280300F2EBD4 /* PVSupport-Bridging-Header.h */,
+			);
+			name = Emulator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BECD156F1BA4CF1200F2EBD4 /* Provenance TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BECD157F1BA4CF1200F2EBD4 /* Build configuration list for PBXNativeTarget "Provenance TV" */;
+			buildPhases = (
+				BECD156C1BA4CF1200F2EBD4 /* Sources */,
+				BECD156D1BA4CF1200F2EBD4 /* Frameworks */,
+				BECD156E1BA4CF1200F2EBD4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Provenance TV";
+			productName = "Provenance TV";
+			productReference = BECD15701BA4CF1200F2EBD4 /* Provenance TV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BECD15681BA4CF1200F2EBD4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Provenance;
+				TargetAttributes = {
+					BECD156F1BA4CF1200F2EBD4 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = BECD156B1BA4CF1200F2EBD4 /* Build configuration list for PBXProject "Provenance TV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BECD15671BA4CF1200F2EBD4;
+			productRefGroup = BECD15711BA4CF1200F2EBD4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BECD156F1BA4CF1200F2EBD4 /* Provenance TV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BECD156E1BA4CF1200F2EBD4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECD157B1BA4CF1200F2EBD4 /* Assets.xcassets in Resources */,
+				BECD15791BA4CF1200F2EBD4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BECD156C1BA4CF1200F2EBD4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECD15991BA4D4AE00F2EBD4 /* EmulatorViewController.swift in Sources */,
+				BECD159F1BA4D6EB00F2EBD4 /* Game.swift in Sources */,
+				BECD15761BA4CF1200F2EBD4 /* ViewController.swift in Sources */,
+				BECD159D1BA4D59800F2EBD4 /* EmulatorConfiguration.swift in Sources */,
+				BECD15741BA4CF1200F2EBD4 /* AppDelegate.swift in Sources */,
+				BECD159B1BA4D56800F2EBD4 /* GLViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BECD15771BA4CF1200F2EBD4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BECD15781BA4CF1200F2EBD4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BECD157D1BA4CF1200F2EBD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		BECD157E1BA4CF1200F2EBD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BECD15801BA4CF1200F2EBD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../PVSNES/**",
+					"$(SRCROOT)/../PVSupport/**",
+				);
+				INFOPLIST_FILE = "Provenance TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/PVSNES/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/PVSupport/build/Debug-iphoneos",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.provenance.Provenance-TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Provenance TV/PVSupport-Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		BECD15811BA4CF1200F2EBD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../PVSNES/**",
+					"$(SRCROOT)/../PVSupport/**",
+				);
+				INFOPLIST_FILE = "Provenance TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/PVSNES/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/PVSupport/build/Debug-iphoneos",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.provenance.Provenance-TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Provenance TV/PVSupport-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BECD156B1BA4CF1200F2EBD4 /* Build configuration list for PBXProject "Provenance TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BECD157D1BA4CF1200F2EBD4 /* Debug */,
+				BECD157E1BA4CF1200F2EBD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BECD157F1BA4CF1200F2EBD4 /* Build configuration list for PBXNativeTarget "Provenance TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BECD15801BA4CF1200F2EBD4 /* Debug */,
+				BECD15811BA4CF1200F2EBD4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BECD15681BA4CF1200F2EBD4 /* Project object */;
+}
