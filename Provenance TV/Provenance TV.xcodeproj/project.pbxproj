@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEB9AE7F1BA8BA8E00575F8A /* TVServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB9AE7E1BA8BA8E00575F8A /* TVServices.framework */; };
+		BEB9AE8C1BA8FF9500575F8A /* openvgdb.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = BEB9AE8B1BA8FF9500575F8A /* openvgdb.sqlite */; };
+		BEB9AE8E1BA9014D00575F8A /* OESQLiteDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB9AE8D1BA9014D00575F8A /* OESQLiteDatabase.m */; };
+		BEB9AE911BA9020F00575F8A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BEB9AE901BA9020F00575F8A /* libsqlite3.tbd */; };
+		BEB9AE931BA9030500575F8A /* FetchGameDetailsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9AE921BA9030500575F8A /* FetchGameDetailsOperation.swift */; };
 		BECD15741BA4CF1200F2EBD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD15731BA4CF1200F2EBD4 /* AppDelegate.swift */; };
 		BECD15761BA4CF1200F2EBD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BECD15751BA4CF1200F2EBD4 /* ViewController.swift */; };
 		BECD15791BA4CF1200F2EBD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BECD15771BA4CF1200F2EBD4 /* Main.storyboard */; };
@@ -28,6 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BEB9AE7E1BA8BA8E00575F8A /* TVServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TVServices.framework; path = System/Library/Frameworks/TVServices.framework; sourceTree = SDKROOT; };
+		BEB9AE8B1BA8FF9500575F8A /* openvgdb.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = openvgdb.sqlite; sourceTree = "<group>"; };
+		BEB9AE8D1BA9014D00575F8A /* OESQLiteDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OESQLiteDatabase.m; sourceTree = "<group>"; };
+		BEB9AE8F1BA9017B00575F8A /* OESQLiteDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OESQLiteDatabase.h; sourceTree = "<group>"; };
+		BEB9AE901BA9020F00575F8A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BEB9AE921BA9030500575F8A /* FetchGameDetailsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FetchGameDetailsOperation.swift; path = "Provenance TV/FetchGameDetailsOperation.swift"; sourceTree = "<group>"; };
 		BECD15701BA4CF1200F2EBD4 /* Provenance TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Provenance TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BECD15731BA4CF1200F2EBD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BECD15751BA4CF1200F2EBD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB9AE911BA9020F00575F8A /* libsqlite3.tbd in Frameworks */,
+				BEB9AE7F1BA8BA8E00575F8A /* TVServices.framework in Frameworks */,
 				BECD15951BA4D0B700F2EBD4 /* OpenGLES.framework in Frameworks */,
 				BECD15931BA4D0B000F2EBD4 /* UIKit.framework in Frameworks */,
 				BECD15911BA4D0A900F2EBD4 /* Foundation.framework in Frameworks */,
@@ -72,9 +85,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BEB9AE881BA8FF6200575F8A /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				BEB9AE8F1BA9017B00575F8A /* OESQLiteDatabase.h */,
+				BEB9AE8D1BA9014D00575F8A /* OESQLiteDatabase.m */,
+				BEB9AE8B1BA8FF9500575F8A /* openvgdb.sqlite */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
 		BECD15671BA4CF1200F2EBD4 = {
 			isa = PBXGroup;
 			children = (
+				BEB9AE881BA8FF6200575F8A /* Vendor */,
 				BECD15971BA4D49600F2EBD4 /* Emulator */,
 				BECD15721BA4CF1200F2EBD4 /* Provenance TV */,
 				BECD15961BA4D0C100F2EBD4 /* Frameworks */,
@@ -105,6 +129,8 @@
 		BECD15961BA4D0C100F2EBD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEB9AE901BA9020F00575F8A /* libsqlite3.tbd */,
+				BEB9AE7E1BA8BA8E00575F8A /* TVServices.framework */,
 				BECD15941BA4D0B700F2EBD4 /* OpenGLES.framework */,
 				BECD15921BA4D0B000F2EBD4 /* UIKit.framework */,
 				BECD15901BA4D0A900F2EBD4 /* Foundation.framework */,
@@ -127,6 +153,7 @@
 				BECD159C1BA4D59800F2EBD4 /* EmulatorConfiguration.swift */,
 				BECD159E1BA4D6EB00F2EBD4 /* Game.swift */,
 				BECD15A01BA5280300F2EBD4 /* PVSupport-Bridging-Header.h */,
+				BEB9AE921BA9030500575F8A /* FetchGameDetailsOperation.swift */,
 			);
 			name = Emulator;
 			sourceTree = "<group>";
@@ -190,6 +217,7 @@
 			files = (
 				BECD157B1BA4CF1200F2EBD4 /* Assets.xcassets in Resources */,
 				BECD15791BA4CF1200F2EBD4 /* Main.storyboard in Resources */,
+				BEB9AE8C1BA8FF9500575F8A /* openvgdb.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +233,9 @@
 				BECD15761BA4CF1200F2EBD4 /* ViewController.swift in Sources */,
 				BECD159D1BA4D59800F2EBD4 /* EmulatorConfiguration.swift in Sources */,
 				BECD15741BA4CF1200F2EBD4 /* AppDelegate.swift in Sources */,
+				BEB9AE931BA9030500575F8A /* FetchGameDetailsOperation.swift in Sources */,
 				BECD159B1BA4D56800F2EBD4 /* GLViewController.swift in Sources */,
+				BEB9AE8E1BA9014D00575F8A /* OESQLiteDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

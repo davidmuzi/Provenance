@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:Provenance.xcodeproj">
+      location = "group:Provenance TV/Provenance TV.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Provenance TV/Provenance TV.xcodeproj">
+      location = "container:Provenance.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:PVSupport/PVSupport.xcodeproj">
