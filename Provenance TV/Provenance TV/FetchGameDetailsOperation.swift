@@ -13,13 +13,15 @@ class FetchGameDetailsOperation : NSOperation {
     let md5: String
     let filename: String
     let completion: ((Game) -> Void)
+    let systemId: String
     
     let database: OESQLiteDatabase?
     
-    init(md5: String, filename: String, completion: ((Game) -> Void)) {
+    init(md5: String, filename: String, systemId: String, completion: ((Game) -> Void)) {
         self.md5 = md5
         self.filename = filename
         self.completion = completion
+        self.systemId = systemId
         
         do {
             try database = OESQLiteDatabase(URL: NSBundle.mainBundle().URLForResource("openvgdb", withExtension: "sqlite"))
@@ -47,20 +49,21 @@ class FetchGameDetailsOperation : NSOperation {
                 
                 for result in results {
                     
-                    if (result["region"] == "USA") {
+                    if (result["region"] == "USA" && result["boxImageURL"] != nil) {
                         
-                        if let result = result as? NSDictionary {
-                            
-                            var game = Game(romPath: filename, systemIdentifier: "das")
-                            game.title = result["gameTitle"] as! String
-                            
-                            if let boxArt = result["boxImageURL"] {
-                                game.originalArtworkURL = boxArt as! String
+                        if let gameResult = result as? NSDictionary {
+                        
+                            var game = Game(romPath: filename, systemIdentifier: systemId)
+                            game.title = gameResult["gameTitle"] as! String
+                        
+                            if let image = gameResult["boxImageURL"] as? String {
+                                
+                                game.originalArtworkURL = image
+                                completion(game)
+                                
+                                break
                             }
                             
-                            completion(game)
-                            
-                            break
                         }
                     }
                 }

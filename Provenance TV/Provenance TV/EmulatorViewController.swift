@@ -44,18 +44,6 @@ class EmulatorViewController: UIViewController {
             view.addSubview(glViewController!.view)
             glViewController!.didMoveToParentViewController(self)
         }
-        
-        // game details
-        let filename = (game.romPath as NSString).lastPathComponent
-        let name = (filename as NSString).stringByDeletingPathExtension
-        
-        let operation = FetchGameDetailsOperation(md5: "dsd", filename: name) { (game) -> Void in
-            
-            print("game \(game)")
-            
-        }
-        
-        NSOperationQueue.mainQueue().addOperation(operation)
     }
 
     func configureEmulatorCore() -> Bool {
