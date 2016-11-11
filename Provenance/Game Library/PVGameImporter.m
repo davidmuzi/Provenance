@@ -16,6 +16,9 @@
 #import "PVSynchronousURLSession.h"
 #import "PVEmulatorConstants.h"
 
+static NSString *exactQuery = @"SELECT DISTINCT releaseTitleName as 'gameTitle', releaseCoverFront as 'boxImageURL' FROM ROMs rom LEFT JOIN RELEASES release USING (romID) WHERE romHashMD5 = '%@'";
+static NSString *likeQuery = @"SELECT DISTINCT romFileName, releaseTitleName as 'gameTitle', releaseCoverFront as 'boxImageURL', regionName as 'region', systemShortName FROM ROMs rom LEFT JOIN RELEASES release USING (romID) LEFT JOIN SYSTEMS system USING (systemID) LEFT JOIN REGIONS region on (regionLocalizedID=region.regionID) WHERE romFileName LIKE \"%%%@%%\" AND systemID=\"%@\" ORDER BY case when romFileName LIKE \"%@%%\" then 1 else 0 end DESC";
+
 @interface PVGameImporter ()
 
 @property (nonatomic, readwrite, strong) dispatch_queue_t serialImportQueue;
@@ -436,10 +439,7 @@
     
     if ([[game md5Hash] length])
     {
-        results = [self searchDatabaseUsingKey:@"romHashMD5"
-                                         value:[[game md5Hash] uppercaseString]
-                                      systemID:[game systemIdentifier]
-                                         error:&error];
+        results = [self searchDatabaseWithMD5:game.md5Hash.uppercaseString systemID:game.systemIdentifier error:&error];
     }
     
     if (![results count])
@@ -462,10 +462,7 @@
             gameTitleLen = [fileName length];
         }
         fileName = [fileName substringToIndex:gameTitleLen];
-        results = [self searchDatabaseUsingKey:@"romFileName"
-                                         value:fileName
-                                      systemID:[game systemIdentifier]
-                                         error:&error];
+        results = [self searchDatabaseWithFileName:fileName systemID:game.systemIdentifier error:&error];
     }
     
     if (![results count])
@@ -551,38 +548,43 @@
     }
 }
 
-- (NSArray *)searchDatabaseUsingKey:(NSString *)key value:(NSString *)value systemID:(NSString *)systemID error:(NSError **)error
+- (OESQLiteDatabase *)openVGDB
 {
-    if (!self.openVGDB)
-    {
-        self.openVGDB = [[OESQLiteDatabase alloc] initWithURL:[[NSBundle mainBundle] URLForResource:@"openvgdb" withExtension:@"sqlite"]
-                                                        error:error];
-    }
-    if (!self.openVGDB)
-    {
-        DLog(@"Unable to open game database: %@", [*error localizedDescription]);
-        return nil;
+    if (_openVGDB) {
+        return _openVGDB;
     }
     
-    NSArray *results = nil;
-    NSString *exactQuery = @"SELECT DISTINCT releaseTitleName as 'gameTitle', releaseCoverFront as 'boxImageURL' FROM ROMs rom LEFT JOIN RELEASES release USING (romID) WHERE %@ = '%@'";
-    NSString *likeQuery = @"SELECT DISTINCT romFileName, releaseTitleName as 'gameTitle', releaseCoverFront as 'boxImageURL', regionName as 'region', systemShortName FROM ROMs rom LEFT JOIN RELEASES release USING (romID) LEFT JOIN SYSTEMS system USING (systemID) LEFT JOIN REGIONS region on (regionLocalizedID=region.regionID) WHERE %@ LIKE \"%%%@%%\" AND systemID=\"%@\" ORDER BY case when %@ LIKE \"%@%%\" then 1 else 0 end DESC";
+    NSError *error = nil;
+    _openVGDB = [[OESQLiteDatabase alloc] initWithURL:[[NSBundle mainBundle] URLForResource:@"openvgdb" withExtension:@"sqlite"]
+                                                error:&error];
+    
+    NSAssert(error == nil, @"Unable to open game database: %@", [error localizedDescription]);
+    
+    return _openVGDB;
+}
+
+- (NSArray *)searchDatabaseWithMD5:(NSString *)md5 systemID:(NSString *)systemID error:(NSError **)error
+{
+    NSString *queryString = [NSString stringWithFormat:exactQuery, md5];
+    
+    return [self.openVGDB executeQuery:queryString
+                                 error:error];
+}
+
+- (NSArray *)searchDatabaseWithFileName:(NSString *)fileName systemID:(NSString *)systemID error:(NSError **)error
+{
     NSString *queryString = nil;
     
     NSString *dbSystemID = [[PVEmulatorConfiguration sharedInstance] databaseIDForSystemID:systemID];
     
-    if ([key isEqualToString:@"romFileName"])
-    {
-        queryString = [NSString stringWithFormat:likeQuery, key, value, dbSystemID, key, value];
-    }
-    else
-    {
-        queryString = [NSString stringWithFormat:exactQuery, key, value];
-    }
+    fileName = [fileName stringByDeletingPathExtension];
+    fileName = [fileName stringByReplacingOccurrencesOfString:@" and " withString:@" "];
+    fileName = [fileName stringByReplacingOccurrencesOfString:@" " withString:@"%"];
     
-    results = [self.openVGDB executeQuery:queryString
+    queryString = [NSString stringWithFormat:likeQuery, fileName, dbSystemID, fileName];
+    
+    return [self.openVGDB executeQuery:queryString
                                     error:error];
-    return results;
 }
 
 #pragma mark - Utils

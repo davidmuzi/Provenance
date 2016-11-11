@@ -24,6 +24,7 @@ typedef void (^PVGameImporterFinishedGettingArtworkHandler)(NSString *artworkURL
 @property (nonatomic, assign) BOOL encounteredConflicts;
 
 - (instancetype)initWithCompletionHandler:(PVGameImporterCompletionHandler)completionHandler;
+- (NSArray *)searchDatabaseWithFileName:(NSString *)fileName systemID:(NSString *)systemID error:(NSError **)error;
 
 - (void)startImportForPaths:(NSArray *)paths;
 

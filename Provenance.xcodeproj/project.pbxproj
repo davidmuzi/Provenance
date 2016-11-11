@@ -242,6 +242,8 @@
 		BEB41B3B1CAB01D6009E0B7E /* PVGame+Sizing.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB41B3A1CAB01D6009E0B7E /* PVGame+Sizing.m */; };
 		BEC075CD1C221F3A00305027 /* RLMRealmConfiguration+GroupConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC075CC1C221F3A00305027 /* RLMRealmConfiguration+GroupConfig.m */; };
 		BEC075CE1C221F3A00305027 /* RLMRealmConfiguration+GroupConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC075CC1C221F3A00305027 /* RLMRealmConfiguration+GroupConfig.m */; };
+		BEC5632E1DD40892001821E5 /* PVGameLookupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEC5632D1DD40891001821E5 /* PVGameLookupViewController.m */; };
+		BEEF18CA1DD5FD3900B4DF60 /* PVBaseSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEF18C91DD5FD3900B4DF60 /* PVBaseSearchViewController.m */; };
 		E414488B1B3125D90056D80A /* iCadeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E41448891B3125D90056D80A /* iCadeReaderView.m */; };
 		E414488E1B3126190056D80A /* PViCadeGamepad.m in Sources */ = {isa = PBXBuildFile; fileRef = E414488D1B3126190056D80A /* PViCadeGamepad.m */; };
 		E41448911B34B9600056D80A /* PViCadeController.m in Sources */ = {isa = PBXBuildFile; fileRef = E41448901B34B9600056D80A /* PViCadeController.m */; };
@@ -536,6 +538,10 @@
 		BEB41B3A1CAB01D6009E0B7E /* PVGame+Sizing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PVGame+Sizing.m"; sourceTree = "<group>"; };
 		BEC075CB1C221F3A00305027 /* RLMRealmConfiguration+GroupConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RLMRealmConfiguration+GroupConfig.h"; sourceTree = "<group>"; };
 		BEC075CC1C221F3A00305027 /* RLMRealmConfiguration+GroupConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RLMRealmConfiguration+GroupConfig.m"; sourceTree = "<group>"; };
+		BEC5632C1DD40891001821E5 /* PVGameLookupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVGameLookupViewController.h; sourceTree = "<group>"; };
+		BEC5632D1DD40891001821E5 /* PVGameLookupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVGameLookupViewController.m; sourceTree = "<group>"; };
+		BEEF18C81DD5FD3900B4DF60 /* PVBaseSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVBaseSearchViewController.h; sourceTree = "<group>"; };
+		BEEF18C91DD5FD3900B4DF60 /* PVBaseSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVBaseSearchViewController.m; sourceTree = "<group>"; };
 		E41448881B3125D90056D80A /* iCadeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCadeReaderView.h; sourceTree = "<group>"; };
 		E41448891B3125D90056D80A /* iCadeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCadeReaderView.m; sourceTree = "<group>"; };
 		E414488A1B3125D90056D80A /* iCadeState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCadeState.h; sourceTree = "<group>"; };
@@ -1008,8 +1014,12 @@
 				1AACCAEC1BB61D5600DC21AE /* PVTVSplitViewController.m */,
 				1ACE9A081BACBC9E00C72AA5 /* PVTVSettingsViewController.h */,
 				1ACE9A091BACBC9E00C72AA5 /* PVTVSettingsViewController.m */,
+				BEEF18C81DD5FD3900B4DF60 /* PVBaseSearchViewController.h */,
+				BEEF18C91DD5FD3900B4DF60 /* PVBaseSearchViewController.m */,
 				1A2B13CB1D0DFF5100D0B863 /* PVSearchViewController.h */,
 				1A2B13CC1D0DFF5100D0B863 /* PVSearchViewController.m */,
+				BEC5632C1DD40891001821E5 /* PVGameLookupViewController.h */,
+				BEC5632D1DD40891001821E5 /* PVGameLookupViewController.m */,
 				1AD481BF1BA350A400FDA50A /* Main.storyboard */,
 				1AD481C21BA350A400FDA50A /* TVAssets.xcassets */,
 				1AD481C41BA350A400FDA50A /* Info.plist */,
@@ -1520,9 +1530,11 @@
 				1AD481D81BA3543700FDA50A /* GCDWebServerConnection.m in Sources */,
 				1A5209891BADCBB500DAE6E3 /* PVControllerManager.m in Sources */,
 				1AD482001BA354B100FDA50A /* PViCadeInputAxis.m in Sources */,
+				BEC5632E1DD40892001821E5 /* PVGameLookupViewController.m in Sources */,
 				1AD481D11BA3540600FDA50A /* PVConflictViewController.m in Sources */,
 				1AD482031BA354C400FDA50A /* PVGenesisControllerViewController.m in Sources */,
 				1AD481E21BA3545B00FDA50A /* GCDWebServerFileResponse.m in Sources */,
+				BEEF18CA1DD5FD3900B4DF60 /* PVBaseSearchViewController.m in Sources */,
 				1AD481F91BA354B100FDA50A /* iCadeReaderView.m in Sources */,
 				1AD481F21BA3549400FDA50A /* NSString+Hashing.m in Sources */,
 				1AD481E01BA3545400FDA50A /* GCDWebServerDataResponse.m in Sources */,

@@ -6,8 +6,8 @@
 //  Copyright © 2016 James Addyman. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "PVBaseSearchViewController.h"
 
-@interface PVSearchViewController : UICollectionViewController <UISearchResultsUpdating>
+@interface PVSearchViewController : PVBaseSearchViewController <UISearchResultsUpdating>
 
 @end

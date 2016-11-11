@@ -38,6 +38,7 @@
 #import "RLMRealmConfiguration+GroupConfig.h"
 #import "PVEmulatorConstants.h"
 #import "PVAppConstants.h"
+#import "PVGameLookupViewController.h"
 
 NSString * const PVGameLibraryHeaderView = @"PVGameLibraryHeaderView";
 NSString * const kRefreshLibraryNotification = @"kRefreshLibraryNotification";
@@ -46,7 +47,7 @@ NSString * const PVRequiresMigrationKey = @"PVRequiresMigration";
 
 static const CGFloat CellWidth = 308.0;
 
-@interface PVGameLibraryViewController ()
+@interface PVGameLibraryViewController () <PVGameLookupDelegate>
 
 @property (nonatomic, strong) RLMRealm *realm;
 @property (nonatomic, strong) PVDirectoryWatcher *watcher;
@@ -944,13 +945,13 @@ static NSString *_reuseIdentifier = @"PVGameLibraryCollectionViewCell";
                                                           [weakSelf renameGame:game];
                                                       }]];
 
-#if !TARGET_OS_TV
         [actionSheet addAction:[UIAlertAction actionWithTitle:@"Choose Custom Artwork"
                                                         style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction * _Nonnull action) {
                                                           [weakSelf chooseCustomArtworkForGame:game];
                                                       }]];
         
+#if !TARGET_OS_TV
         [actionSheet addAction:[UIAlertAction actionWithTitle:@"Paste Custom Artwork"
                                                         style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction * _Nonnull action) {
@@ -1191,9 +1192,9 @@ static NSString *_reuseIdentifier = @"PVGameLibraryCollectionViewCell";
     }
 }
 
-#if !TARGET_OS_TV
 - (void)chooseCustomArtworkForGame:(PVGame *)game
 {
+#if !TARGET_OS_TV
     __weak PVGameLibraryViewController *weakSelf = self;
     
     UIActionSheet *imagePickerActionSheet = [[UIActionSheet alloc] init];
@@ -1296,8 +1297,18 @@ static NSString *_reuseIdentifier = @"PVGameLibraryCollectionViewCell";
                                           [imagePickerActionSheet showInView:self.view];
                                           weakSelf.assetsLibrary = nil;
                                       }];
+    
+#else
+    PVGameLookupViewController *searchViewController = [[PVGameLookupViewController alloc] init];
+    searchViewController.gameImporter = self.gameImporter;
+    searchViewController.game = game;
+    searchViewController.delegate = self;
+    
+    [self presentViewController:searchViewController.navigationControllerWrapper animated:YES completion:nil];
+#endif
 }
 
+#if !TARGET_OS_TV
 - (void)pasteCustomArtworkForGame:(PVGame *)game
 {
     UIPasteboard *pb = [UIPasteboard generalPasteboard];
@@ -1403,8 +1414,22 @@ static NSString *_reuseIdentifier = @"PVGameLibraryCollectionViewCell";
     }
 	
     [cell setupWithGame:game];
-    
+
 	return cell;
+}
+
+- (void)gameLookupController:(PVGameLookupViewController *)controller didChooseGame:(PVGame *)game
+{
+    PVGame *originalGame = controller.game;
+    
+    [self.realm beginWriteTransaction];
+    originalGame.customArtworkURL = game.customArtworkURL;
+    [self.realm commitWriteTransaction];
+    NSArray *indexPaths = [self indexPathsForGameWithMD5Hash:originalGame.md5Hash];
+    [self fetchGames];
+    [self.collectionView reloadItemsAtIndexPaths:indexPaths];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - UICollectionViewDelegate & UICollectionViewDelegateFlowLayout

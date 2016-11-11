@@ -36,22 +36,12 @@
 
 #if TARGET_OS_TV
 	if ([[self.window rootViewController] isKindOfClass:[UITabBarController class]]) {
-		UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
 
-		UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-		[flowLayout setSectionInset:UIEdgeInsetsMake(20, 0, 20, 0)];
-		PVSearchViewController *searchViewController = [[PVSearchViewController alloc] initWithCollectionViewLayout:flowLayout];
+		PVSearchViewController *searchViewController = [[PVSearchViewController alloc] init];
 
-		UISearchController *searchController = [[UISearchController alloc] initWithSearchResultsController:searchViewController];
-		searchController.searchResultsUpdater = searchViewController;
-
-		UISearchContainerViewController *searchContainerController = [[UISearchContainerViewController alloc] initWithSearchController:searchController];
-		[searchContainerController setTitle:@"Search"];
-
-		UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:searchContainerController];
-
+        UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
 		NSMutableArray *viewControllers = [[tabBarController viewControllers] mutableCopy];
-		[viewControllers insertObject:navController atIndex:1];
+		[viewControllers insertObject:searchViewController.navigationControllerWrapper atIndex:1];
 		[tabBarController setViewControllers:viewControllers];
 	}
 #endif
