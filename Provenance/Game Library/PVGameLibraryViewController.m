@@ -1300,7 +1300,6 @@ static NSString *_reuseIdentifier = @"PVGameLibraryCollectionViewCell";
     
 #else
     PVGameLookupViewController *searchViewController = [[PVGameLookupViewController alloc] init];
-    searchViewController.gameImporter = self.gameImporter;
     searchViewController.game = game;
     searchViewController.delegate = self;
     

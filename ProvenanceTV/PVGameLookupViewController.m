@@ -12,6 +12,7 @@
 
 @interface PVGameLookupViewController ()
 @property (nonatomic, strong) NSArray *searchResults;
+@property (nonatomic, strong) PVGameImporter *gameImporter;
 @end
 
 @implementation PVGameLookupViewController
@@ -22,6 +23,34 @@
     [(UICollectionViewFlowLayout *)self.collectionViewLayout setSectionInset:UIEdgeInsetsMake(20, 0, 20, 0)];
     [self.collectionView registerClass:[PVGameLibraryCollectionViewCell class] forCellWithReuseIdentifier:@"SearchResultCell"];
     [self.collectionView setContentInset:UIEdgeInsetsMake(40, 80, 40, 80)];
+    
+    self.gameImporter = [[PVGameImporter alloc] initWithCompletionHandler:nil];
+
+    __weak PVGameLookupViewController *welf = self;
+    self.gameImporter.finishedArtworkHandler = ^(NSString *url) {
+        
+        NSIndexPath *indexPath = [welf indexPathForURL:url];
+        if (indexPath) {
+            [welf.collectionView reloadItemsAtIndexPaths:@[indexPath]];
+        }
+    };
+}
+
+- (NSIndexPath *)indexPathForURL:(NSString *)url {
+    
+    __block NSUInteger row = NSNotFound;
+    
+    [self.searchResults enumerateObjectsUsingBlock:^(NSDictionary   * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        if ([obj[@"boxImageURL"] isEqualToString:url]) {
+            row = idx;
+            *stop = YES;
+        }
+    }];
+    
+    if (row == NSNotFound) return nil;
+    
+    return [NSIndexPath indexPathForRow:row inSection:0];
 }
 
 // MARK: UISearchResultsUpdating
@@ -62,7 +91,7 @@
     
     PVGame *game = [[PVGame alloc] init];
     game.title = dictionary[@"gameTitle"];
-    game.originalArtworkURL = dictionary[@"boxImageURL"];
+    game.customArtworkURL = dictionary[@"boxImageURL"];
     game.systemIdentifier = self.game.systemIdentifier;
     
     [self.delegate gameLookupController:self didChooseGame:game];

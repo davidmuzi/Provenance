@@ -20,9 +20,7 @@
 
 @interface PVGameLookupViewController : PVBaseSearchViewController <UISearchResultsUpdating>
 
-@property (nonatomic, strong) PVGameImporter *gameImporter;
 @property (nonatomic, strong) PVGame *game;
-
 @property (nonatomic, weak) id <PVGameLookupDelegate> delegate;
 
 @end
